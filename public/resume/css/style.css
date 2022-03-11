@@ -64,6 +64,14 @@ img {
     height: auto;
 }
 
+.img-slide{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2px;
+    filter: drop-shadow(5px 5px 10px #666);
+    border-radius: 10px;
+        }
+        
 a,
 a:hover,
 a:focus {

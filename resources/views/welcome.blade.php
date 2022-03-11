@@ -9,9 +9,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="keywords" content="vcard, resume, portfolio, cv, card, responsive" />
+    <meta name="keywords" content="vcard, resume, portfolio, cv curriculum vitae" />
     <meta name="description" content="vCard / Resume / ielemson cv " />
-    <meta name="author" content="cosmos-themes" />
+    <meta name="author" content="Elemson Ifeanyi" />
 
     <!--Page Title-->
     <title>ielemson - vCard / Resume/ CV</title>
@@ -19,11 +19,8 @@
     <!--Plugins Css-->
     <link rel="stylesheet" href="{{ asset('resume/css/plugins.css') }}">
     <!--Main Styles Css-->
-    <link rel="stylesheet" href="{{ asset('resume/css/style-light.css') }}">
-    {{-- <link rel="stylesheet" href="{{asset('resume/css/login.css')}}"> --}}
-
-    <!-- <link rel="stylesheet" href="css/style-demo.css"> -->
-
+    <link rel="stylesheet" href="{{ asset('resume/css/style.css') }}">
+   
     <!--Color Css-->
     <link class="site-color" rel="stylesheet" href="{{ asset('resume/css/blue-color.css') }}">
 
@@ -43,19 +40,7 @@
 
     @stack('before-styles')
 
-    {{-- <link rel="stylesheet" href="{{ mix('css/frontend.css') }}"> --}}
-
     @stack('after-styles')
-
-    <style>
-    .img-slide{
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 2px;
-    filter: drop-shadow(5px 5px 10px #666);
-    border-radius: 10px;
-        }
-    </style>
 
 </head>
 
