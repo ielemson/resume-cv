@@ -43,7 +43,7 @@
                 <!--Social Links-->
                 <ul class="social">
                     <li><a href="https://web.facebook.com/ielemson" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="https://twitter.com/IAM_SOFTBONE" target="_blank" class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://twitter.com/_ielemson" target="_blank" class="fab fa-twitter-square"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/ielemson/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                     {{-- <li><a href="#"><i class="fab fa-dribbble-square"></i></a></li> --}}
                     {{-- <li><a href="#"><i class="fab fa-behance-square"></i></a></li> --}}
