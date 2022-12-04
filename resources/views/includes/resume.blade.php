@@ -19,6 +19,20 @@
                     <li>
                         <span class="line-left"></span>
                         <div class="content">
+                            <h4>Programmar / Anaylst II</h4>
+                            <h5>Univrsity of Agriculture and Environmental Sciences (UAES) Umuagwo, Imo State</h5>
+                            <p class="info">
+                             Head developer / System analyst II
+                            </p>
+                        </div>
+                        <span class="year">
+                            <span class="to">Present</span>
+                            <span class="from">2021</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="line-left"></span>
+                        <div class="content">
                             <h4>Lead Frontend Developer</h4>
                             <h5>CIE Owerri Imo State</h5>
                             <p class="info">
