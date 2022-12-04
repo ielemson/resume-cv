@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@lang('panel.site_title')</title>
+	<title>Admin Dashboard</title>
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
@@ -58,7 +58,7 @@
 					<li>
 						@if(auth()->user())
                             <a href="{{ route('userEdit',auth()->user()->id) }}" class="dropdown-item">
-                                <i class="fas fa-cogs"></i> @lang('global.settings')
+                                <i class="fas fa-cogs"></i> Settings
                             </a>
                         @endif
 					</li>
@@ -69,7 +69,7 @@
 						<a href="#" class="nav-link" role="button" onclick="
                                     event.preventDefault();
                                     document.getElementById('logout-form').submit();">
-							<i class="fas fa-sign-out-alt"></i> @lang('global.logout')
+							<i class="fas fa-sign-out-alt"></i> Logout
 						</a>
 					</li>
 				</ul>
@@ -94,7 +94,7 @@
 	<!-- Main Sidebar Container -->
 	<aside class="main-sidebar elevation-1 {{ auth()->user()->theme()['sidebar'] ?? 'sidebar-dark-primary' }}">
 		<!-- Brand Logo -->
-		<a href="#" class="brand-link">
+		<a href="{{route('home')}}" class="brand-link">
 			<img src="{{ asset('consImages/logoU.png') }}" alt="Unired Logo" class="brand-image img-circle elevation-3"
 				 style="opacity: .8">
 			<span class="brand-text font-weight-light">{{__('Dashboard')}}</span>

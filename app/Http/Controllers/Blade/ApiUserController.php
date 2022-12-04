@@ -13,7 +13,7 @@ class ApiUserController extends Controller
     // List of users
     public function index()
     {
-        abort_if_forbidden('api-user.view');
+        // abort_if_forbidden('api-user.view');
         $users = ApiUser::with('tokens')->latest()->get();
         return view('pages.api-user.index',compact('users'));
     }
@@ -21,7 +21,7 @@ class ApiUserController extends Controller
     // user add page
     public function add()
     {
-        abort_if_forbidden('api-user.add');
+        // abort_if_forbidden('api-user.add');
         return view('pages.api-user.add');
     }
 
@@ -43,7 +43,7 @@ class ApiUserController extends Controller
 
     public function show($id)
     {
-        abort_if_forbidden('api-user.view');
+        // abort_if_forbidden('api-user.view');
         $tokens = Token::where('api_user_id',$id)->get();
         return view('pages.api-user.show',compact('tokens'));
 
@@ -52,7 +52,7 @@ class ApiUserController extends Controller
     // user create
     public function create(Request $request)
     {
-        abort_if_forbidden('api-user.add');
+        // abort_if_forbidden('api-user.add');
         $this->validate($request,[
             'name' => ['required', 'string', 'max:999999', 'unique:api_users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
@@ -74,7 +74,7 @@ class ApiUserController extends Controller
     // user edit page
     public function edit($id)
     {
-        abort_if_forbidden('api-user.edit');
+        // abort_if_forbidden('api-user.edit');
         $user = ApiUser::find($id);
         return view('pages.api-user.edit',compact('user'));
     }
@@ -82,7 +82,7 @@ class ApiUserController extends Controller
     // update user dates
     public function update(Request $request, $id)
     {
-        abort_if_forbidden('api-user.edit');
+        // abort_if_forbidden('api-user.edit');
 
         $this->validate($request,[
             'name' => ['required', 'string', 'max:255', 'unique:api_users,name,'.$id],
@@ -111,7 +111,7 @@ class ApiUserController extends Controller
     // delete user by id
     public function destroy($id)
     {
-        abort_if_forbidden('api-user.delete');
+        // abort_if_forbidden('api-user.delete');
 
         $user = ApiUser::findOrFail($id);
         $user->deleteTokens();
@@ -127,7 +127,7 @@ class ApiUserController extends Controller
     // delete user token by id
     public function destroyToken($id)
     {
-        abort_if_forbidden('api-user.delete');
+        // abort_if_forbidden('api-user.delete');
 
         $token = Token::findOrFail($id);
         $token->delete();

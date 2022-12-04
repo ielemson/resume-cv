@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>@lang('cruds.permission.title')</h1>
+                    <h1>Permission</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">@lang('global.home')</a></li>
-                        <li class="breadcrumb-item active">@lang('cruds.permission.title')</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item active">Permission</li>
                     </ol>
                 </div>
             </div>
@@ -24,11 +24,11 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">@lang('cruds.permission.title_singular')</h3>
+                        <h3 class="card-title">Permissions</h3>
                         @can('permission.add')
                         <a href="{{ route('permissionAdd') }}" class="btn btn-success btn-sm float-right">
                             <span class="fas fa-plus-circle"></span>
-                            @lang('global.add')
+                        Add Permission
                         </a>
                         @endcan
                     </div>
@@ -38,11 +38,11 @@
                         <table id="dataTable" class="table table-bordered table-striped dataTable dtr-inline table-responsive-lg" role="grid" aria-describedby="dataTable_info">
                             <thead>
                             <tr>
-                                <th>@lang('cruds.permission.fields.id')</th>
-                                <th>@lang('cruds.permission.fields.name')</th>
-                                <th>@lang('cruds.permission.fields.title')</th>
-                                <th>@lang('cruds.permission.fields.roles')</th>
-                                <th class="w-25">@lang('global.actions')</th>
+                                <th>Permission Id</th>
+                                <th>Permission Name</th>
+                                <th>Permission Title</th>
+                                <th>Permision Role</th>
+                                <th class="w-25">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -62,10 +62,10 @@
                                             @csrf
                                             <div class="btn-group">
                                                 @can('permission.edit')
-                                                <a href="{{ route('permissionEdit',$permission->id) }}" type="button" class="btn btn-info btn-sm"> @lang('global.edit')</a>
+                                                <a href="{{ route('permissionEdit',$permission->id) }}" type="button" class="btn btn-info btn-sm">Edit</a>
                                                 @endcan
                                                 <input name="_method" type="hidden" value="DELETE">
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="if (confirm('Вы уверены?')) {this.form.submit()}"> @lang('global.delete')</button>
+                                                <button type="button" class="btn btn-danger btn-sm" onclick="if (confirm('Delete?')) {this.form.submit()}"> Delete</button>
                                             </div>
                                         </form>
                                         @endcan

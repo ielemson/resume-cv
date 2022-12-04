@@ -6,12 +6,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>API-@lang('cruds.user.title')</h1>
+                        <h1>API-Users</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">@lang('global.home')</a></li>
-                            <li class="breadcrumb-item active">API-@lang('cruds.user.title')</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                            <li class="breadcrumb-item active">User</li>
                         </ol>
                     </div>
                 </div>
@@ -24,11 +24,11 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">@lang('cruds.user.title_singular')</h3>
+                            <h3 class="card-title">API Users</h3>
                             @can('user.add')
                             <a href="{{ route('api-userAdd') }}" class="btn btn-success btn-sm float-right">
                             <span class="fas fa-plus-circle"></span>
-                                @lang('global.add')
+                                Add User
                             </a>
                             @endcan
                         </div>
@@ -44,7 +44,7 @@
                                     <th>Created by</th>
                                     <th>Tokens</th>
                                     <th>Activate</th>
-                                    <th style="width: 10px">@lang('global.actions')</th>
+                                    <th style="width: 10px">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
